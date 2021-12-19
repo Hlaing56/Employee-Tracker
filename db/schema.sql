@@ -21,8 +21,6 @@ CREATE TABLE employee (
   last_name VARCHAR(30) NOT NULL,
   role_id INTEGER,
   manager_id INTEGER,
-  CONSTRAINT fk_roleId FOREIGN KEY (role_id) REFERENCES employeeRole(id) ON DELETE SET NULL
-  -- CONSTRAINT fk_managerId FOREIGN KEY (manager_id) REFERENCES employee(id)
+  CONSTRAINT fk_roleId FOREIGN KEY (role_id) REFERENCES employeeRole(id) ON DELETE SET NULL,
+  CONSTRAINT fk_mana FOREIGN KEY (manager_id) REFERENCES employee (id) ON DELETE SET NULL
 );
-
--- make alis tables
