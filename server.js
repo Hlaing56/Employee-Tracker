@@ -24,7 +24,7 @@ function main(){
             type: 'list',
             name: 'main',
             message: 'What would you like to do?',
-            choices: ['View all departments', 'View all roles', 'View all employees', 'Add a department', 'Add a role', 'Add a employee', 'Update an employee role', 'test', 'done']
+            choices: ['View all departments', 'View all roles', 'View all employees', 'Add a department', 'Add a role', 'Add a employee', 'Update an employee role', 'done']
         }
     ]).then (data => {
         switch(data.main){
@@ -169,7 +169,7 @@ function addEmployee(){
             type: 'list',
             name: 'manager',
             message: 'Who is your manager?',
-            choices: ['Bob Mick', 'Mark Jacobs', 'James Mac', 'Nobody']
+            choices: ['Bob Mick', 'James Mac', 'Tom Fae', 'Nobody']
         }
     ]).then (data => {
         if (data.role === 'salesManager') {
@@ -188,9 +188,9 @@ function addEmployee(){
 
         if (data.manager === 'Bob Mick') {
             data.manager = 1;
-        } else if (data.manager === 'Mark Jacobs') {
-            data.manager = 2;
         } else if (data.manager === 'James Mac') {
+            data.manager = 2;
+        } else if (data.manager === 'Tom Fae') {
             data.manager = 3;
         } else if (data.manager === 'Nobody') {
             data.manager = null;
